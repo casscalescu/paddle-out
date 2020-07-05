@@ -1,0 +1,7 @@
+<h5><%= surfboard.name %></h2>
+<ul>
+  <li>Brand - <%= surfboard.brand %></li>
+  <li>Catagory - <%= surfboard.category %></li>
+  <li>$<%= surfboard.price %> per day</li>
+</ul>
+<%= link_to "Inspect", surfboard_path(surfboard), class: "button" %>

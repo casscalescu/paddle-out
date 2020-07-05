@@ -17,7 +17,20 @@ class SurfboardsController < ApplicationController
   end
 
   def index
-    @surfboards = Surfboard.all
+    if params[:query].present?
+      # @surfboards = Surfboard.where("location ILIKE ?", "%#{params[:query]}%")
+      @surfboards = Surfboard.near(params[:query], 5, units: :km)
+      @surfboards = Surfboard.all if @surfboards.empty?
+      # @surfboards.empty? ? @surfboards = Surfboard.all : @surfboards
+    else
+      @surfboards = Surfboard.all
+    end
+    @markers = @surfboards.map do |surfboard|
+      {
+        lat: surfboard.latitude,
+        lng: surfboard.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { surfboard: surfboard }) }
+    end
   end
 
   def show
