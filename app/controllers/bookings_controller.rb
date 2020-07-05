@@ -1,8 +1,9 @@
 class BookingsController < ApplicationController
+  before_action :find_booking, only: [:show]
+
   def new
     @surfboard = Surfboard.find(params[:surfboard_id])
     @booking = Booking.new
-    @user = current_user
   end
 
   def create
@@ -18,16 +19,17 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @user = current_user
-    @booking = Booking.find(params[:id])
   end
 
   def index
     @bookings = Booking.all
-    @user = current_user
   end
 
   private
+
+  def find_booking
+    @booking = Booking.find(params[:id])
+  end
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :surfboard_id)

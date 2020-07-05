@@ -4,7 +4,6 @@ class SurfboardsController < ApplicationController
 
   def new
     @surfboard = Surfboard.new
-    @user = current_user
   end
 
   def create
@@ -51,6 +50,6 @@ class SurfboardsController < ApplicationController
   end
 
   def surfboard_params
-    params.require(:surfboard).permit(:name, :brand, :price, :description, :deposit, :location)
+    params.require(:surfboard).permit(:name, :brand, :price, :description, :deposit, :location, :category, :photo)
   end
 end
