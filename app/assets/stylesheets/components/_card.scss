@@ -1,0 +1,16 @@
+#map {
+  height: calc(100vh - 56px);
+  position: sticky;
+  top: 0;
+}
+
+.cards-container {
+  height: calc(100vh - 56px);
+  overflow: scroll;
+  padding-left: 4vw;
+  padding-right: 2vw;
+}
+
+.card {
+  max-height: 380px;
+}

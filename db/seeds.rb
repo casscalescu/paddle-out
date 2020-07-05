@@ -69,6 +69,34 @@ cass_surfboard_2 = Surfboard.create!(
   file = URI.open("https://source.unsplash.com/featured/?surfboard")
   cass_surfboard_2.photo.attach(io: file, filename: 'cass_surfboard_2.png', content_type: 'image/png')
 
+cass_surfboard_3 = Surfboard.create!(
+    user: cass,
+    name: "Flying Fish",
+    brand: "Aquatic Social Scene",
+    price: rand(30..70),
+    description: "The flying fish features a fuller outline and rail section that allows for maximum stability, speed and control to glide on through those fatter waves. The Flying Fish in its larger sizes are ideal for a confident beginner but the shape won’t disappoint even the most experienced surfers.",
+    deposit: rand(100...300),
+    category: CATEGORY.sample,
+    longitude: rand(144.8600..145.0000),
+    latitude: rand(-37.88020..-37.75650)
+  )
+  file = URI.open("https://source.unsplash.com/featured/?surfboard")
+  cass_surfboard_3.photo.attach(io: file, filename: 'cass_surfboard_3.png', content_type: 'image/png')
+
+cass_surfboard_4 = Surfboard.create!(
+    user: cass,
+    name: "Flying Fish",
+    brand: "Aquatic Social Scene",
+    price: rand(30..70),
+    description: "The flying fish features a fuller outline and rail section that allows for maximum stability, speed and control to glide on through those fatter waves. The Flying Fish in its larger sizes are ideal for a confident beginner but the shape won’t disappoint even the most experienced surfers.",
+    deposit: rand(100...300),
+    category: CATEGORY.sample,
+    longitude: rand(144.8600..145.0000),
+    latitude: rand(-37.88020..-37.75650)
+  )
+  file = URI.open("https://source.unsplash.com/featured/?surfboard")
+  cass_surfboard_4.photo.attach(io: file, filename: 'cass_surfboard_4.png', content_type: 'image/png')
+
 gloria_surfboard_1 = Surfboard.create!(
     user: gloria,
     name: "Re-Evolution",
@@ -82,6 +110,48 @@ gloria_surfboard_1 = Surfboard.create!(
   )
   file = URI.open("https://source.unsplash.com/featured/?surfboard")
   gloria_surfboard_1.photo.attach(io: file, filename: 'gloria_surfboard_1.png', content_type: 'image/png')
+
+gloria_surfboard_2 = Surfboard.create!(
+    user: gloria,
+    name: "Re-Evolution",
+    brand: "Beau Young",
+    price: rand(30..70),
+    description: "The Re Evolution is constructed using traditional Volan cloth for a heavier feel, creating improved glide and trim than a standard longboard. In addition to the incorporation of Volan cloth, the Re Evolution features an addition two layers of 6oz cloth on the deck and two 4oz layers on the bottom making this our toughest longboard to date.",
+    deposit: rand(100...300),
+    category: CATEGORY.sample,
+    longitude: rand(144.8600..145.0000),
+    latitude: rand(-37.88020..-37.75650)
+  )
+  file = URI.open("https://source.unsplash.com/featured/?surfboard")
+  gloria_surfboard_2.photo.attach(io: file, filename: 'gloria_surfboard_2.png', content_type: 'image/png')
+
+gloria_surfboard_3 = Surfboard.create!(
+    user: gloria,
+    name: "Re-Evolution",
+    brand: "Beau Young",
+    price: rand(30..70),
+    description: "The Re Evolution is constructed using traditional Volan cloth for a heavier feel, creating improved glide and trim than a standard longboard. In addition to the incorporation of Volan cloth, the Re Evolution features an addition two layers of 6oz cloth on the deck and two 4oz layers on the bottom making this our toughest longboard to date.",
+    deposit: rand(100...300),
+    category: CATEGORY.sample,
+    longitude: rand(144.8600..145.0000),
+    latitude: rand(-37.88020..-37.75650)
+  )
+  file = URI.open("https://source.unsplash.com/featured/?surfboard")
+  gloria_surfboard_3.photo.attach(io: file, filename: 'gloria_surfboard_3.png', content_type: 'image/png')
+
+gloria_surfboard_4 = Surfboard.create!(
+    user: gloria,
+    name: "Re-Evolution",
+    brand: "Beau Young",
+    price: rand(30..70),
+    description: "The Re Evolution is constructed using traditional Volan cloth for a heavier feel, creating improved glide and trim than a standard longboard. In addition to the incorporation of Volan cloth, the Re Evolution features an addition two layers of 6oz cloth on the deck and two 4oz layers on the bottom making this our toughest longboard to date.",
+    deposit: rand(100...300),
+    category: CATEGORY.sample,
+    longitude: rand(144.8600..145.0000),
+    latitude: rand(-37.88020..-37.75650)
+  )
+  file = URI.open("https://source.unsplash.com/featured/?surfboard")
+  gloria_surfboard_4.photo.attach(io: file, filename: 'gloria_surfboard_4.png', content_type: 'image/png')
 
 puts 'Finished!'
 
